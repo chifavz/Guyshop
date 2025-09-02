@@ -3,7 +3,10 @@
  */
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Guyshop`,
+    description: `A modern e-commerce platform for men's fashion and accessories`,
+    author: `chike ibekwe`,
+    siteUrl: `https://guyshop.netlify.app`,
   },
   plugins: [],
 }
