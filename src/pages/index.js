@@ -1,31 +1,40 @@
 import React from "react";
 import Layout from "../components/Layout";
 import NavigationLinks from "../components/NavigationLinks";
+import ProductCard from "../components/ProductCard";
 import { navigationLinks, documentationLink } from "../data/siteData";
+import { products } from "../data/products";
 import * as styles from "../styles/HomePage.module.css";
 
 const IndexPage = () => {
   return (
     <Layout>
       <h1 className={styles.heading}>
-        Congratulations
+        Welcome to Guyshop
         <br />
-        <span className={styles.headingAccent}>— you just made a Gatsby site! 🎉🎉🎉</span>
+        <span className={styles.headingAccent}>Men's Fashion & Accessories</span>
       </h1>
       <p className={styles.paragraph}>
-        Edit <code className={styles.code}>src/pages/index.js</code> to see this page
-        update in real-time. 😎
+        Discover our curated collection of premium men's fashion. From classic essentials to modern trends, find everything you need to elevate your style.
       </p>
-      <NavigationLinks links={navigationLinks} docLink={documentationLink} />
-      <img
-        className={styles.logo}
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
+      
+      <div className={styles.section}>
+        <h2 className={styles.sectionTitle}>Shop by Category</h2>
+        <NavigationLinks links={navigationLinks} docLink={documentationLink} />
+      </div>
+
+      <div className={styles.section}>
+        <h2 className={styles.sectionTitle}>Featured Products</h2>
+        <div className={styles.productsGrid}>
+          {products.map(product => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </div>
     </Layout>
   );
 };
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <title>Guyshop - Men's Fashion & Accessories</title>;

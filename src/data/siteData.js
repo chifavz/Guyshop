@@ -1,51 +1,38 @@
 export const navigationLinks = [
   {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/getting-started/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
+    text: "Shop All",
+    url: "/",
+    description: "Browse our complete collection of men's fashion and accessories.",
     color: "#E95800",
   },
   {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
+    text: "Jackets",
+    url: "/category/jackets",
+    description: "Stylish jackets and outerwear for every season.",
     color: "#1099A8",
   },
   {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
+    text: "Shirts",
+    url: "/category/shirts",
+    description: "Classic and modern shirts for work and casual wear.",
     color: "#BC027F",
   },
   {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
+    text: "Shoes",
+    url: "/category/shoes",
+    description: "Quality footwear from casual to formal occasions.",
     color: "#0D96F2",
   },
   {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
+    text: "Sweaters",
+    url: "/category/sweaters",
+    description: "Comfortable sweaters and knitwear for layering.",
     color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you're ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
   },
 ];
 
 export const documentationLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
+  text: "About",
+  url: "/about",
   color: "#8954A8",
 };
