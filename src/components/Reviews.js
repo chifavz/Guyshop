@@ -139,8 +139,9 @@ const Reviews = ({ reviews, productName }) => {
           </div>
           
           <div className={styles.formGroup}>
-            <label className={styles.label}>Rating</label>
-            <div className={styles.ratingInput} role="radiogroup" aria-label="Product rating">
+            <span className={styles.label}>Rating</span>
+            <div className={styles.ratingInput} role="radiogroup" aria-labelledby="rating-label">
+              <span id="rating-label" className={styles.srOnly}>Product rating</span>
               {[1, 2, 3, 4, 5].map(star => (
                 <button
                   key={star}
