@@ -120,6 +120,16 @@
   font-weight: 600;
 }
 
+.successMessage {
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
 .reviewForm {
   display: flex;
   flex-direction: column;
@@ -204,12 +214,17 @@
   align-self: flex-start;
 }
 
-.submitButton:hover {
+.submitButton:hover:not(:disabled) {
   background: #552288;
 }
 
-.submitButton:active {
+.submitButton:active:not(:disabled) {
   transform: translateY(1px);
+}
+
+.submitButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
 }
 
 /* Responsive adjustments */

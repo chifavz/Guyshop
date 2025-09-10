@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import * as styles from "../styles/Reviews.module.css";
 
 const Reviews = ({ reviews, productName }) => {
+  const [reviewForm, setReviewForm] = useState({
+    name: '',
+    rating: 0,
+    comment: ''
+  });
+  const [hoverRating, setHoverRating] = useState(0);
+  const [submitted, setSubmitted] = useState(false);
+
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
@@ -26,6 +34,42 @@ const Reviews = ({ reviews, productName }) => {
       month: 'long',
       day: 'numeric'
     });
+  };
+
+  const handleStarClick = (rating) => {
+    setReviewForm(prev => ({ ...prev, rating }));
+  };
+
+  const handleStarHover = (rating) => {
+    setHoverRating(rating);
+  };
+
+  const handleStarLeave = () => {
+    setHoverRating(0);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setReviewForm(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (reviewForm.name && reviewForm.rating && reviewForm.comment) {
+      // In a real app, this would submit to a backend
+      console.log('Review submitted:', reviewForm);
+      setSubmitted(true);
+      setReviewForm({ name: '', rating: 0, comment: '' });
+      
+      // Reset success message after 3 seconds
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 3000);
+    }
+  };
+
+  const getRatingDisplay = (rating) => {
+    return hoverRating > 0 ? hoverRating : rating;
   };
 
   return (
@@ -74,21 +118,38 @@ const Reviews = ({ reviews, productName }) => {
 
       <div className={styles.addReviewSection}>
         <h4 className={styles.addReviewTitle}>Write a Review</h4>
-        <form className={styles.reviewForm}>
+        {submitted && (
+          <div className={styles.successMessage}>
+            Thank you! Your review has been submitted successfully.
+          </div>
+        )}
+        <form className={styles.reviewForm} onSubmit={handleSubmit}>
           <div className={styles.formGroup}>
-            <label className={styles.label}>Your Name</label>
-            <input type="text" className={styles.input} placeholder="Enter your name" />
+            <label htmlFor="reviewer-name" className={styles.label}>Your Name</label>
+            <input 
+              type="text" 
+              id="reviewer-name"
+              name="name"
+              className={styles.input} 
+              placeholder="Enter your name"
+              value={reviewForm.name}
+              onChange={handleInputChange}
+              required
+            />
           </div>
           
           <div className={styles.formGroup}>
             <label className={styles.label}>Rating</label>
-            <div className={styles.ratingInput}>
+            <div className={styles.ratingInput} role="radiogroup" aria-label="Product rating">
               {[1, 2, 3, 4, 5].map(star => (
                 <button
                   key={star}
                   type="button"
-                  className={styles.starButton}
+                  className={`${styles.starButton} ${star <= getRatingDisplay(reviewForm.rating) ? styles.active : ''}`}
                   aria-label={`${star} star${star !== 1 ? 's' : ''}`}
+                  onClick={() => handleStarClick(star)}
+                  onMouseEnter={() => handleStarHover(star)}
+                  onMouseLeave={handleStarLeave}
                 >
                   ★
                 </button>
@@ -97,15 +158,24 @@ const Reviews = ({ reviews, productName }) => {
           </div>
 
           <div className={styles.formGroup}>
-            <label className={styles.label}>Your Review</label>
+            <label htmlFor="review-comment" className={styles.label}>Your Review</label>
             <textarea 
+              id="review-comment"
+              name="comment"
               className={styles.textarea} 
               placeholder="Share your thoughts about this product..."
               rows="4"
+              value={reviewForm.comment}
+              onChange={handleInputChange}
+              required
             ></textarea>
           </div>
 
-          <button type="submit" className={styles.submitButton}>
+          <button 
+            type="submit" 
+            className={styles.submitButton}
+            disabled={!reviewForm.name || !reviewForm.rating || !reviewForm.comment}
+          >
             Submit Review
           </button>
         </form>
