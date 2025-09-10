@@ -4,7 +4,7 @@ export const products = [
     name: "Classic Denim Jacket",
     price: 89.99,
     description: "A timeless denim jacket perfect for layering. Made from premium cotton denim with a comfortable fit.",
-    image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=400&fit=crop",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%234A90E2'/%3E%3Ctext x='200' y='180' text-anchor='middle' fill='white' font-size='24' font-family='Arial'%3EDenim%3C/text%3E%3Ctext x='200' y='220' text-anchor='middle' fill='white' font-size='24' font-family='Arial'%3EJacket%3C/text%3E%3C/svg%3E",
     category: "Jackets",
     reviews: [
       {
@@ -28,7 +28,7 @@ export const products = [
     name: "Oxford Button-Down Shirt",
     price: 49.99,
     description: "Classic oxford shirt in crisp white. Perfect for office or casual wear. 100% cotton construction.",
-    image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=400&fit=crop",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%2350C878'/%3E%3Ctext x='200' y='180' text-anchor='middle' fill='white' font-size='24' font-family='Arial'%3EOxford%3C/text%3E%3Ctext x='200' y='220' text-anchor='middle' fill='white' font-size='24' font-family='Arial'%3EShirt%3C/text%3E%3C/svg%3E",
     category: "Shirts",
     reviews: [
       {
@@ -45,7 +45,7 @@ export const products = [
     name: "Leather Chelsea Boots",
     price: 159.99,
     description: "Premium leather Chelsea boots with elastic side panels. Comfortable and stylish for any occasion.",
-    image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23B4621B'/%3E%3Ctext x='200' y='180' text-anchor='middle' fill='white' font-size='24' font-family='Arial'%3EChelsea%3C/text%3E%3Ctext x='200' y='220' text-anchor='middle' fill='white' font-size='24' font-family='Arial'%3EBoots%3C/text%3E%3C/svg%3E",
     category: "Shoes",
     reviews: [
       {
@@ -69,7 +69,7 @@ export const products = [
     name: "Merino Wool Sweater",
     price: 79.99,
     description: "Soft merino wool sweater in charcoal gray. Lightweight yet warm, perfect for layering.",
-    image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop",
+    image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23757575'/%3E%3Ctext x='200' y='180' text-anchor='middle' fill='white' font-size='24' font-family='Arial'%3EMerino%3C/text%3E%3Ctext x='200' y='220' text-anchor='middle' fill='white' font-size='24' font-family='Arial'%3ESweater%3C/text%3E%3C/svg%3E",
     category: "Sweaters",
     reviews: []
   }

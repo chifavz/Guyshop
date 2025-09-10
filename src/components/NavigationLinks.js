@@ -7,7 +7,7 @@ const NavigationLinks = ({ links, docLink }) => {
       <li className={styles.docLink}>
         <a
           className={styles.link}
-          href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+          href={docLink.url}
         >
           {docLink.text}
         </a>
@@ -17,7 +17,7 @@ const NavigationLinks = ({ links, docLink }) => {
           <span>
             <a
               className={styles.link}
-              href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+              href={link.url}
             >
               {link.text}
             </a>
