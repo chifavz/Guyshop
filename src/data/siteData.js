@@ -7,32 +7,32 @@ export const navigationLinks = [
   },
   {
     text: "Jackets",
-    url: "/category/jackets",
+    url: "/#jackets",
     description: "Stylish jackets and outerwear for every season.",
     color: "#1099A8",
   },
   {
-    text: "Shirts",
-    url: "/category/shirts",
+    text: "Shirts", 
+    url: "/#shirts",
     description: "Classic and modern shirts for work and casual wear.",
     color: "#BC027F",
   },
   {
     text: "Shoes",
-    url: "/category/shoes",
+    url: "/#shoes",
     description: "Quality footwear from casual to formal occasions.",
     color: "#0D96F2",
   },
   {
     text: "Sweaters",
-    url: "/category/sweaters",
+    url: "/#sweaters",
     description: "Comfortable sweaters and knitwear for layering.",
     color: "#8EB814",
   },
 ];
 
 export const documentationLink = {
-  text: "About",
-  url: "/about",
+  text: "About Us",
+  url: "/#about",
   color: "#8954A8",
 };

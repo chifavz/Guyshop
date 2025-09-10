@@ -1,18 +1,18 @@
 .page {
   color: #232129;
-  padding: 96px;
-  font-family: -apple-system, Roboto, sans-serif, serif;
-  background: #f7f7f7;
-  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: inherit;
 }
 
 .heading {
   margin-top: 0;
   margin-bottom: 64px;
-  max-width: 320px;
+  max-width: 100%;
   font-size: 2.5rem;
   line-height: 1.1;
   color: #232129;
+  text-align: center;
 }
 
 .headingAccent {
@@ -22,10 +22,13 @@
 
 .paragraph {
   margin-bottom: 48px;
-  max-width: 560px;
+  max-width: 800px;
   font-size: 1.1rem;
   line-height: 1.6;
   color: #555;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .code {
@@ -100,27 +103,40 @@
   color: #232129;
   margin-bottom: 1.5rem;
   font-weight: 600;
+  text-align: center;
 }
 
 .productsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
   margin-top: 2rem;
+  justify-items: center;
 }
 
-/* Responsive adjustments */
+/* Enhanced responsive adjustments */
 @media (max-width: 768px) {
   .page {
-    padding: 48px 24px;
+    padding: 1rem;
   }
   
   .heading {
     font-size: 2rem;
     max-width: none;
+    text-align: center;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
   }
   
   .productsGrid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .paragraph {
+    font-size: 1rem;
+    text-align: center;
   }
 }
