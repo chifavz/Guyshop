@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#f8f9fa"/>
+  
+  <!-- Shirt base -->
+  <path d="M140 80 L260 80 L270 100 L270 300 L260 320 L140 320 L130 300 L130 100 Z" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+  
+  <!-- Collar -->
+  <path d="M140 80 L170 60 L200 55 L230 60 L260 80 L240 90 L200 75 L160 90 Z" fill="#f8f9fa" stroke="#d0d0d0" stroke-width="1.5"/>
+  
+  <!-- Button placket -->
+  <rect x="190" y="90" width="20" height="230" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- Buttons -->
+  <circle cx="200" cy="110" r="3" fill="#ffffff" stroke="#d0d0d0" stroke-width="1"/>
+  <circle cx="200" cy="135" r="3" fill="#ffffff" stroke="#d0d0d0" stroke-width="1"/>
+  <circle cx="200" cy="160" r="3" fill="#ffffff" stroke="#d0d0d0" stroke-width="1"/>
+  <circle cx="200" cy="185" r="3" fill="#ffffff" stroke="#d0d0d0" stroke-width="1"/>
+  <circle cx="200" cy="210" r="3" fill="#ffffff" stroke="#d0d0d0" stroke-width="1"/>
+  <circle cx="200" cy="235" r="3" fill="#ffffff" stroke="#d0d0d0" stroke-width="1"/>
+  <circle cx="200" cy="260" r="3" fill="#ffffff" stroke="#d0d0d0" stroke-width="1"/>
+  <circle cx="200" cy="285" r="3" fill="#ffffff" stroke="#d0d0d0" stroke-width="1"/>
+  
+  <!-- Chest pocket -->
+  <rect x="150" y="120" width="30" height="25" rx="2" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- Sleeve cuffs -->
+  <rect x="130" y="280" width="15" height="30" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="255" y="280" width="15" height="30" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- Cuff buttons -->
+  <circle cx="137" cy="295" r="2" fill="#ffffff" stroke="#d0d0d0" stroke-width="0.5"/>
+  <circle cx="262" cy="295" r="2" fill="#ffffff" stroke="#d0d0d0" stroke-width="0.5"/>
+  
+  <!-- Subtle shirt texture -->
+  <pattern id="oxford" patternUnits="userSpaceOnUse" width="3" height="3">
+    <rect width="3" height="3" fill="#ffffff"/>
+    <rect x="0" y="0" width="1" height="1" fill="#f8f9fa"/>
+    <rect x="2" y="2" width="1" height="1" fill="#f8f9fa"/>
+  </pattern>
+  <rect x="140" y="80" width="120" height="240" fill="url(#oxford)" opacity="0.5"/>
+  
+  <!-- Seam lines -->
+  <line x1="140" y1="100" x2="140" y2="310" stroke="#e0e0e0" stroke-width="0.5" opacity="0.7"/>
+  <line x1="260" y1="100" x2="260" y2="310" stroke="#e0e0e0" stroke-width="0.5" opacity="0.7"/>
+</svg>

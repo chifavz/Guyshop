@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#f8f9fa"/>
+  
+  <!-- Boot base -->
+  <ellipse cx="200" cy="350" rx="80" ry="20" fill="#8B4513" opacity="0.3"/>
+  
+  <!-- Left boot -->
+  <path d="M140 220 L160 200 L190 195 L200 200 L200 340 L180 350 L140 350 L130 340 L130 230 Z" fill="#654321" stroke="#4a2c17" stroke-width="2"/>
+  
+  <!-- Right boot -->
+  <path d="M200 200 L210 195 L240 200 L260 220 L270 230 L270 340 L260 350 L220 350 L200 340 Z" fill="#654321" stroke="#4a2c17" stroke-width="2"/>
+  
+  <!-- Elastic side panels -->
+  <rect x="190" y="220" width="20" height="100" fill="#2c1810" stroke="#1a0f08" stroke-width="1"/>
+  
+  <!-- Elastic lines -->
+  <line x1="195" y1="230" x2="195" y2="310" stroke="#4a2c17" stroke-width="0.5" opacity="0.7"/>
+  <line x1="200" y1="230" x2="200" y2="310" stroke="#4a2c17" stroke-width="0.5" opacity="0.7"/>
+  <line x1="205" y1="230" x2="205" y2="310" stroke="#4a2c17" stroke-width="0.5" opacity="0.7"/>
+  
+  <!-- Boot toe caps -->
+  <ellipse cx="155" cy="340" rx="25" ry="15" fill="#7a5a3a" stroke="#4a2c17" stroke-width="1"/>
+  <ellipse cx="245" cy="340" rx="25" ry="15" fill="#7a5a3a" stroke="#4a2c17" stroke-width="1"/>
+  
+  <!-- Heel -->
+  <rect x="135" y="330" width="10" height="20" fill="#4a2c17"/>
+  <rect x="255" y="330" width="10" height="20" fill="#4a2c17"/>
+  
+  <!-- Ankle seams -->
+  <path d="M140 280 Q170 275 200 280" stroke="#4a2c17" stroke-width="1" fill="none"/>
+  <path d="M200 280 Q230 275 260 280" stroke="#4a2c17" stroke-width="1" fill="none"/>
+  
+  <!-- Boot shine/highlight -->
+  <ellipse cx="170" cy="260" rx="15" ry="30" fill="#ffffff" opacity="0.2"/>
+  <ellipse cx="230" cy="260" rx="15" ry="30" fill="#ffffff" opacity="0.2"/>
+  
+  <!-- Leather texture -->
+  <pattern id="leather" patternUnits="userSpaceOnUse" width="4" height="4">
+    <rect width="4" height="4" fill="#654321"/>
+    <circle cx="1" cy="1" r="0.3" fill="#7a5a3a" opacity="0.5"/>
+    <circle cx="3" cy="3" r="0.3" fill="#5a3a1a" opacity="0.5"/>
+  </pattern>
+  <path d="M140 220 L160 200 L190 195 L200 200 L200 340 L180 350 L140 350 L130 340 L130 230 Z" fill="url(#leather)" opacity="0.4"/>
+  <path d="M200 200 L210 195 L240 200 L260 220 L270 230 L270 340 L260 350 L220 350 L200 340 Z" fill="url(#leather)" opacity="0.4"/>
+  
+  <!-- Sole -->
+  <ellipse cx="200" cy="350" rx="75" ry="18" fill="#2c1810" stroke="#1a0f08" stroke-width="1"/>
+  
+  <!-- Sole pattern -->
+  <pattern id="sole" patternUnits="userSpaceOnUse" width="8" height="4">
+    <rect width="8" height="4" fill="#2c1810"/>
+    <rect x="1" y="1" width="2" height="2" fill="#1a0f08"/>
+    <rect x="5" y="1" width="2" height="2" fill="#1a0f08"/>
+  </pattern>
+  <ellipse cx="200" cy="350" rx="70" ry="15" fill="url(#sole)" opacity="0.8"/>
+</svg>
