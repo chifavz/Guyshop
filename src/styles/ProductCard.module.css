@@ -21,6 +21,14 @@
   border-radius: 4px;
   margin-bottom: 1rem;
   cursor: pointer;
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+.imageContainer:focus {
+  outline: 2px solid #663399;
+  outline-offset: 2px;
 }
 
 .productImage {
@@ -47,10 +55,20 @@
   color: #333;
   cursor: pointer;
   transition: color 0.2s ease;
+  border: none;
+  background: none;
+  padding: 0;
+  text-align: left;
+  font-family: inherit;
 }
 
 .productName:hover {
   color: #663399;
+}
+
+.productName:focus {
+  outline: 2px solid #663399;
+  outline-offset: 2px;
 }
 
 .productDescription {

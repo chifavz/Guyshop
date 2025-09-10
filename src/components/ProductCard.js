@@ -34,17 +34,25 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className={styles.productCard}>
-      <div className={styles.imageContainer} onClick={handleViewProduct}>
+      <button 
+        className={styles.imageContainer} 
+        onClick={handleViewProduct}
+        aria-label={`View details for ${product.name}`}
+      >
         <img 
           src={product.image} 
           alt={product.name}
           className={styles.productImage}
         />
-      </div>
+      </button>
       <div className={styles.productInfo}>
-        <h3 className={styles.productName} onClick={handleViewProduct}>
+        <button 
+          className={styles.productName} 
+          onClick={handleViewProduct}
+          aria-label={`View details for ${product.name}`}
+        >
           {product.name}
-        </h3>
+        </button>
         <p className={styles.productDescription}>{product.description}</p>
         <div className={styles.priceAndRating}>
           <span className={styles.price}>${product.price}</span>
