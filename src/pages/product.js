@@ -41,6 +41,22 @@ const ProductDetailPage = ({ params }) => {
     return (total / product.reviews.length).toFixed(1);
   };
 
+  const handleAddToCart = () => {
+    // Use global cart function if available (client-side)
+    if (typeof window !== 'undefined' && window.guyshopCart) {
+      window.guyshopCart.addToCart(product);
+    } else {
+      // Backend-ready: This would be an API call to add to cart
+      console.log('Backend API Call - Add to Cart:', {
+        productId: product.id,
+        productName: product.name,
+        price: product.price,
+        quantity: 1,
+        timestamp: new Date().toISOString()
+      });
+    }
+  };
+
   return (
     <Layout>
       <div className={styles.container}>
@@ -76,7 +92,7 @@ const ProductDetailPage = ({ params }) => {
             </div>
             
             <div className={styles.actions}>
-              <button className={styles.addToCartButton}>
+              <button className={styles.addToCartButton} onClick={handleAddToCart}>
                 Add to Cart - ${product.price}
               </button>
             </div>
