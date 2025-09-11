@@ -32,6 +32,24 @@ const ProductCard = ({ product }) => {
     navigate("/product");
   };
 
+  const handleAddToCart = (e) => {
+    e.stopPropagation();
+    
+    // Use global cart function if available (client-side)
+    if (typeof window !== 'undefined' && window.guyshopCart) {
+      window.guyshopCart.addToCart(product);
+    } else {
+      // Backend-ready: This would be an API call to add to cart
+      console.log('Backend API Call - Add to Cart:', {
+        productId: product.id,
+        productName: product.name,
+        price: product.price,
+        quantity: 1,
+        timestamp: new Date().toISOString()
+      });
+    }
+  };
+
   return (
     <div className={styles.productCard}>
       <button 
@@ -66,7 +84,7 @@ const ProductCard = ({ product }) => {
           </div>
         </div>
         <div className={styles.actions}>
-          <button className={styles.addToCartBtn}>Add to Cart</button>
+          <button className={styles.addToCartBtn} onClick={handleAddToCart}>Add to Cart</button>
           <button className={styles.viewProductBtn} onClick={handleViewProduct}>
             View Details & Reviews
           </button>

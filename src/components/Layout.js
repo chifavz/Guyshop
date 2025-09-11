@@ -1,4 +1,5 @@
 import React from "react";
+import Cart from "./Cart";
 import * as styles from "../styles/Layout.module.css";
 
 const Layout = ({ children }) => {
@@ -11,6 +12,7 @@ const Layout = ({ children }) => {
             <a href="/" className={styles.navLink}>Home</a>
             <a href="/#about" className={styles.navLink}>About</a>
             <a href="/product" className={styles.navLink}>Products</a>
+            <Cart />
           </nav>
         </div>
       </header>

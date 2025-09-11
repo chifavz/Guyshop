@@ -56,8 +56,20 @@ const Reviews = ({ reviews, productName }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (reviewForm.name && reviewForm.rating && reviewForm.comment) {
-      // In a real app, this would submit to a backend
-      console.log('Review submitted:', reviewForm);
+      // Backend-ready: Prepare review data for API submission
+      const reviewData = {
+        productName,
+        author: reviewForm.name,
+        rating: reviewForm.rating,
+        comment: reviewForm.comment,
+        date: new Date().toISOString().split('T')[0], // Format: YYYY-MM-DD
+        timestamp: new Date().toISOString()
+      };
+      
+      // Backend-ready: This would be an API call to POST /api/reviews
+      console.log('Backend API Call - Submit Review:', reviewData);
+      
+      // Simulate API success response
       setSubmitted(true);
       setReviewForm({ name: '', rating: 0, comment: '' });
       
